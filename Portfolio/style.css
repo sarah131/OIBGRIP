@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Lobster', cursive;*/
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7,6,3,0.1),rgba(7,6,3,0.1)),url(images/Banner.png);
+    background-position: center;
+    background-size: cover;
+    position: : relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    color:burlywood;
+    padding-left:4%;
+    padding-top: 2%;
+    font-size: 50px;
+    
+}
+nam img{
+    width: 150px;
+    
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: : #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;    
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+  
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color:beige;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid burlywood;
+    background:burlywood;
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+@media(max-width: 700px){
+    .text-box h1{
+    font-size: 20px;
+}
+
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: burlywood;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        
+    }
+    .nav-links ul{
+        padding: 30px;
+        
+    }
+}
+/*------------About me--------------*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+p{
+    color:darkgoldenrod;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 30%;
+    background: beige;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+/*--------------Certification-----------*/
+.campus{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 70px;
+}
+.campus-col{
+    flex-basis: 18%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col  img{
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:rgba(238,232,170,0.5);
+}
+.layer h3{
+    width: 100%;
+    font-family: cursive;
+    font-weight: 500;
+    color: black;
+    font-size: 20px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom:49%;
+    opacity: 1;
+}
+
+/*--------------Projects-----------*/
+.facilities{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 110px;
+    
+}
+.facilities-col{
+    flex-basis: 29%;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align:left;
+}
+/*--------------my skill-----------*/
+.test{
+    width:80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.test-col{
+    flex-basis: 40%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    margin-top: 1%;
+    background: beige;
+    cursor: pointer;
+    display: flex;
+}
+.hero1-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero1-btn:hover{
+    border: 1px solid burlywood;
+    background:burlywood;
+    transition: 1s;
+}
+
+/*-----------------contact me-------------*/
+.cta{
+    margin: 100px auto;
+    width:80%;
+    background-image: linear-gradient(rgba(7,6,3,0.1),rgba(7,6,3,0.1)),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 10%;
+    
+}
+.cta h1{
+    color: azure;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width:700px){
+    .cta h1{
+        font-size:22px;
+    }
+}
+
+/*--------------footer------------------*/
+
+.footer{
+    margin-top:0%;
+    color: black;
+    padding: 0px 140px;
+    
+}
+
+h5{
+    color:blanchedalmond;
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    padding: 10px;
+}
+
+
+/*-------------- about me page-----------*/
+.sub-header{
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(7,6,3,0.1),rgba(7,6,3,0.1)),url(images/Banner.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    
+}
+sub-header h1{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
